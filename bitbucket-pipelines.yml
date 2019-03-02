@@ -1,0 +1,21 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/VYk8Lw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: samueldebruyn/debian-git
+
+pipelines:
+  custom: # Pipelines that are triggered manually
+    deployment-to-homologacao:
+      - step:
+          script:
+            - apt-get update
+            - apt-get -qq install git-ftp
+            #- git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://64.111.121.30/novaapi.projetobeholder.deevo.com.br/
+            - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://64.111.121.30/novaapi.projetobeholder.deevo.com.br/
+  branches:  # Pipelines that run automatically on a commit to a branch
+    staging:
+      - step:
+          script:
+            - echo "Automated pipelines are cool too."

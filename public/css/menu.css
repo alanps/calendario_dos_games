@@ -1,0 +1,257 @@
+.menu {
+    font-family: "Orator Std";
+    background-color: #F7F7F7;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    height: 4.29em;
+}
+
+
+/*************************/
+/* Logo                  */
+/*************************/
+.menu .logoContainer {
+    position: relative;
+}
+
+.menu .logoContainer img.logo {
+    position: absolute;
+    width: 11em;
+    height: 12.4em;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/*************************/
+/* Menu Itens            */
+/*************************/
+.menu .menuItens {
+    display: flex;
+    padding: 1.5em 0em 0 2em;
+}
+
+.menu .menuItens .menuItem {
+    margin-right: 4em;
+    cursor: pointer;
+}
+
+.menu .menuItens .menuItem:before {
+    content: '-';
+    color: #262626;
+    background-color: #262626;
+    margin-right: 0.8em;
+    position: relative;
+    height: 1.2em;
+    width: 0.7em;
+    display: inline-block;
+}
+
+/*************************/
+/* Busca                 */
+/*************************/
+.menu .busca {
+    display: flex;
+    position: relative;
+    margin: 1.2em 0 0;
+}
+
+.menu .busca label {
+    margin-top: 0.4em;
+    margin-right: 0.5em;
+}
+
+.menu .busca #inputBusca {
+    height: 2em;
+    background-color: #262626;
+    border: 0;
+    position: relative;
+    color: #f7f7f7;
+    padding: 0.1em 2.5em 0 0.5em;
+    font-family: "Verb";
+    width: 100%;
+}
+
+.menu .busca span.icon-search {
+    position: absolute;
+    right: 0.5em;
+    color: #f7f7f7;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    top: 0.28em;
+}
+
+/*************************/
+/* Submenu               */
+/*************************/
+.menu .background {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu .submenu {
+    background-color: #EAEAEA;
+    position: relative;
+    width: 66.1em;
+    top: 0.5em;
+    margin-left: 11em;
+    height: 8.2em;
+    z-index: 10;
+}
+
+.menu .submenu span.titulo {
+    font-family: "Verb";
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+
+.menu .submenu ul.submenuItens {
+    font-size: 0.7em;
+    font-weight: 600;
+    text-align: right;
+}
+
+.menu .submenu .console {
+    text-align: right;
+    position: relative;
+    margin-bottom: 0.3em;
+}
+
+.menu .submenu .console.icon {
+    font-size: 1.2em;
+}
+
+.menu .submenu .container.containerSubmenu {
+    padding: 1.6em 0;
+}
+
+.menu .submenu .icon-playstation4 {
+    font-size: 2em;
+    position: absolute;
+    left: 0.5em;
+    top: -0.2em;
+}
+
+.menu .submenu .icon-playstation3 {
+    font-size: 2em;
+    position: absolute;
+    left: 0.5em;
+    top: -0.2em;
+}
+
+/*************************/
+/* Busca                 */
+/*************************/
+.menu .buscador {
+    background: white;
+    height: 37em;
+    position: relative;
+    top: -0.5em;
+    right: -1em;
+    margin: 1em;
+    z-index: 100;
+    display: none;
+}
+.menu .buscador.ativo {
+    display: block;
+}
+
+.menu .buscador .detalhes {
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    padding: 2em;
+    display: flex;
+    font-size: 0.7em;
+    line-height: 0.7em;
+    height: 4.2em;
+}
+
+.menu .buscador .detalhes span.buscandopor {
+    flex: 1;
+}
+
+.menu .buscador li.resultado.resultado1 {
+    background-color: #FFFFFF;
+}
+
+.menu .buscador li.resultado.resultado2 {
+    background-color: #F7F7F7;
+}
+
+.menu .buscador li.resultado.resultado3 {
+    background-color: #EAEAEA;
+}
+
+.menu .buscador li.resultado {
+    display: flex;
+    padding: 1em;
+}
+
+.menu .buscador li.resultado .capa {
+    width: 6em;
+    display: block;
+    position: relative;
+    margin-right: 1em;
+    height: 8em;
+    border-radius: 1em;
+    padding: 0.3em 0.3em 0.3em 0;
+}
+
+.menu .buscador li.resultado .infos {
+    flex: 1;
+    font-family: "Verb";
+    font-size: 0.7em;
+    text-transform: none;
+}
+
+.menu .buscador li.resultado .infos .titulo {
+    font-size: 1.2em;
+}
+
+.menu .buscador li.resultado .infos .tag {
+    background-color: #EDCB48;
+    width: fit-content;
+    padding: 0.5em 1em 0.1em;
+    color: #262626;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+    font-size: 0.8em;
+    font-family: "Orator Std";
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu .buscador .paginacao {
+    font-size: 0.7em;
+    display: flex;
+    background: #262626;
+    color: white;
+    text-align: center;
+    padding: 1em 10em 0.5em;
+    line-height: 0.7em;
+    margin: 1em 0 0.6em;
+}
+
+.menu .buscador .total {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.menu .buscador .paginacao .espaco {
+    margin: 0 2em;
+}
+
+.menu .buscador li.resultado img.capaGame {
+    width: 100%;
+    height: 100%;
+}

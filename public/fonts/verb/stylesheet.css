@@ -1,0 +1,110 @@
+/* ---------------------------------
+Fonts
+------------------------------------*/
+
+@font-face {
+    font-family: 'Verb';
+        src: url(verblight-webfont.woff) format('woff');
+         font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'Verb';
+        src: url(verbregular-webfont.woff) format('woff');
+         font-weight: 400;
+    font-style: normal;
+
+}
+/* 
+@font-face {
+    font-family: 'Verb';
+        src: url(verbmedium-webfont.woff) format('woff');
+         font-weight: 500;
+    font-style: normal;
+
+}
+ */
+
+@font-face {
+    font-family: 'Verb';
+        src: url(verbsemibold-webfont.woff) format('woff');
+         font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Verb';
+        src: url(verbbold-webfont.woff) format('woff');
+         font-weight: 700;
+    font-style: normal;
+
+}
+/* 
+@font-face {
+    font-family: 'Verb';
+        src: url(verbextrabold-webfont.woff) format('woff');
+         font-weight: 800;
+    font-style: normal;
+
+} */
+/* 
+
+
+@font-face {
+    font-family: 'Verb';
+        src: url(verbblack-webfont.woff) format('woff');
+         font-weight: 900;
+    font-style: normal;
+
+}
+
+
+ */
+
+
+
+
+
+
+@font-face {
+    font-family: 'Verb';
+
+    src: url(verblight-italic-webfont.woff) format('woff');
+          font-weight: 300;
+    font-style: italic;
+
+}
+
+
+
+@font-face {
+    font-family: 'Verb';
+
+    src: url(verbsemibold-italic-webfont.woff) format('woff');
+          font-weight: 600;
+    font-style: italic;
+
+}
+/* 
+@font-face {
+    font-family: 'Verb';
+
+    src: url(verbregular-italic-webfont.woff) format('woff'),;
+          font-weight: 400;
+    font-style: italic;
+
+} */
+/* 
+@font-face {
+    font-family: 'Verb';
+
+    src: url(verbmedium-italic-webfont.woff) format('woff'),;
+          font-weight: normal;
+    font-style: italic;
+
+} */

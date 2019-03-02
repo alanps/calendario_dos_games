@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Orator Std';
+    src: url('OratorStd.woff2') format('woff2'),
+        url('OratorStd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

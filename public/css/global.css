@@ -1,0 +1,72 @@
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+a:hover {
+    color: initial;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none !important;
+    border: 0;
+    box-shadow: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*************************/
+/* Capas                 */
+/*************************/
+.capaXbox {
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	-ms-border-radius: .5em;
+	-o-border-radius: .5em;
+	border-radius: .5em;
+	background: #157f10;
+	padding: .4em .4em .4em 0;
+	width: 11em;
+	height: 14em;
+}
+
+.capaPlaystation4 {
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	-ms-border-radius: .5em;
+	-o-border-radius: .5em;
+	border-radius: .5em;
+	background: #1791b4;
+	padding: .4em .4em .4em 0;
+	width: 11em;
+	height: 14em;
+}
+
+.capaPlaystation3 {
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	-ms-border-radius: .5em;
+	-o-border-radius: .5em;
+	border-radius: .5em;
+	background: #b9babc;
+	padding: 1.8em .4em .4em 0;
+	width: 11em;
+	height: 14em;
+}
+
+.capaPC {
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	-ms-border-radius: .5em;
+	-o-border-radius: .5em;
+	border-radius: .5em;
+	background: #999999;
+	padding: .4em .4em .4em 0;
+	width: 11em;
+	height: 14em;
+}
