@@ -34,6 +34,7 @@
 #page-index section#lancamentos .tituloSecao {
     font-size: 1em;
     line-height: 1.6em;
+    text-transform: uppercase;
 }
 
 #page-index section#lancamentos .game {
@@ -56,7 +57,7 @@
 
 #page-index section#lancamentos .game .data {
     position: relative;
-    height: 4.8em;
+    height: 5.5em;
 }
 
 #page-index section#lancamentos .game .data span.dia {
@@ -67,19 +68,49 @@
     top: 0.7em;
 }
 
+#page-index section#lancamentos .game .data span.ano {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7em;
+    top: 6.5em;
+}
+
+#page-index section#lancamentos .game .data span.lancado {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7em;
+    top: 0em;
+    background-color: #f8fafc;
+    color: #262626;
+    padding: 0.3em 1em 0em;
+    line-height: 1.2em;
+}
+
+#page-index section#lancamentos .game .data span.mes {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    top: 4.2em;
+}
+
 #page-index section#lancamentos .game .data span.icon-calendar-o {
     position: absolute;
     color: #EDCB48;
     font-size: 3em;
     left: 50%;
     transform: translateX(-50%);
+    top: 0em;
 }
 
-#page-index section#lancamentos .game .data span.semana {
+#page-index section#lancamentos .game .data spananomes {
     position: absolute;
-    top: 3.4em;
+    top: 5em;
     left: 50%;
     transform: translateX(-50%);
+    text-transform: uppercase;
 }
 
 #page-index section#lancamentos .game .tag {

@@ -187,6 +187,7 @@
 							<div class="anterior">Anterior</div>
 							<div class="espaco">|</div>
 							<div class="numeros">
+								<img src="{{ asset('images/loading.svg') }}" class="loadingPages">
 								<div class="pagina template">1</div>
 							</div>
 							<div class="espaco">|</div>

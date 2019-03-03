@@ -11,11 +11,12 @@
 
     var Menu =  function(el) {
 
+    	////////////////////////////////
+	    //iniciar
 	    $(document).ready(function(){
 		    var pagina;
 		    var paginas;
 		    var page_size;
-		    var timer;
 			var nomeGame;
 		    iniciar();
 	    });
@@ -24,7 +25,6 @@
 		    pagina = 1;
 		    paginas = 1;
 		    page_size = 3;
-		    timer = null;
 			nomeGame = el.find("#inputBusca").val();
 			el.find(".paginacao .proximo").addClass("ativo");
 			el.find(".paginacao .anterior").removeClass("ativo");
@@ -67,6 +67,7 @@
 		    	if (el.find("#inputBusca").val().length >= 1){
 	    			nomeGame = el.find("#inputBusca").val();
 			    	iniciar();
+			    	el.find(".buscador").addClass("ativo");
 			    	buscador();
 					el.find(".background").addClass("ativo");
 			    } else {

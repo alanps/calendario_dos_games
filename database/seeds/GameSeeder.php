@@ -23,6 +23,7 @@ class GameSeeder extends Seeder
         Media::truncate();
         GaleriasMedia::truncate();
 
+
         ////////////////////////////////
         //Fifa 19
 
@@ -88,6 +89,7 @@ class GameSeeder extends Seeder
         ]);
         $game->save();
 
+
         ////////////////////////////////
         //Far Cry 5
 
@@ -132,6 +134,7 @@ class GameSeeder extends Seeder
             'galeria_id' => $galeria->id,
         ]);
         $game->save();
+
 
         ////////////////////////////////
         //Red Dead Redemption II
@@ -263,6 +266,51 @@ class GameSeeder extends Seeder
             'plataforma3_id'  => 5,
             'desenvolvedora_id'  => 1,
             'lancamento'  => 1485216000,
+            'galeria_id' => $galeria->id,
+        ]);
+        $game->save();
+
+
+        ////////////////////////////////
+        //Assassin's Creed Odyssey
+
+        //galeria
+        $galeria = new Galeria([
+            'nome'  => "Assassin's Creed Odyssey",
+        ]);
+        $galeria->save();
+
+        //media
+        $media = new Media([
+            'user_id'  => 1,
+            'extensao'  => ".jpg",
+            'height'  => 10368,
+            'width'  => 10368,
+            'tamanho'  => 10368,
+            'nome_arquivo'  => "5c674c9af1.jpg",
+            'url'  => "uploads/5c674c9af1.jpg",
+        ]);
+        $media->save();
+
+        //galeria_media
+        $galeria_media = new GaleriasMedia([
+            'galeria_id'  => $galeria->id,
+            'media_id'  => $media->id,
+            'plataforma_id'  => 1,
+        ]);
+        $galeria_media->save();
+
+        //game
+        $game = new Game([
+            'nome'  => "Assassin's Creed Odyssey",
+            'sinopse'  => "Assassin's Creed Odissey é um jogo eletrônico de RPG de ação produzido pela Ubisoft Quebec e publicado pela Ubisoft. É o décimo primeiro título principal da série Assassin's Creed e foi lançado em 5 de Outubro de 2018.",
+            'genero1_id'  => 13,
+            'genero2_id'  => 12,
+            'plataforma1_id'  => 1,
+            'plataforma2_id'  => 4,
+            'plataforma3_id'  => 5,
+            'desenvolvedora_id'  => 4,
+            'lancamento'  => 1538697600,
             'galeria_id' => $galeria->id,
         ]);
         $game->save();

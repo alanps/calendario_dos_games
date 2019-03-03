@@ -16,14 +16,15 @@
 
             <div class="col-md-12">
 
-                <h1 class="tituloSecao">Lançamentos de {{ strftime('%B') }} de {{ strftime('%Y') }}</h1>
+                <h1 class="tituloSecao">Próximos Lançamentos</h1>
 
                 <ul class="games">
                     <li class="game template">
                         <div class="data">
                             <span class="icon-calendar-o"></span>
                             <span class="dia"></span>
-                            <span class="semana"></span>
+                            <span class="mes"></span>
+                            <span class="ano"></span>
                         </div>
                         <div class="capa">
                             <img class="capaGame" src="">

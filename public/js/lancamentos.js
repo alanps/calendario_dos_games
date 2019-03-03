@@ -11,20 +11,28 @@
 
     var Lancamentos =  function(el) {
 
+    	////////////////////////////////
+	    //iniciar
+	    $(document).ready(function(){
+			moment.locale('pt-BR');
+	    	var page_size;
+		    iniciar();
+	    	lista();
+	    });
+
+	    function iniciar(){
+		    page_size = 5;
+		}
 
     	////////////////////////////////
 	    //lancamentos
-		moment.locale('pt-BR');
-	    lista();
 
-	    var page_size = 5;
 		function lista() {
-
 			$.ajax({
 	            url: window.homepath + "buscarGame?include=genero1,genero2,genero3,genero4,genero5,plataforma1,plataforma2,plataforma3,plataforma4,plataforma5,desenvolvedora,galeria,galeria.galeriamedia,galeria.galeriamedia.media,galeria.galeriamedia.plataforma",
 	            method: 'GET',
 	            dataType: 'json',
-			    data: {page_size: page_size, orderby: "lancamento"},
+			    data: {page_size: page_size},
 			    beforeSend: function (data) {
 	               data.setRequestHeader("Authorization", "Bearer "+window.token);
 	            },
@@ -41,7 +49,9 @@
 							template.find(".titulo").html(data.data[i].nome);
 
 							template.find(".data .dia").html(moment.unix(data.data[i].lancamento).add('days', 1).format('DD'));
-							template.find(".data .semana").html(moment.unix(data.data[i].lancamento).add('days', 1).format('dddd'));
+							template.find(".data .mes").html(moment.unix(data.data[i].lancamento).add('days', 1).format('MMMM'));
+							template.find(".data .ano").html(moment.unix(data.data[i].lancamento).add('days', 1).format('YYYY'));
+
 
 							function imageExists(image_url){
 							    var http = new XMLHttpRequest();
@@ -51,7 +61,6 @@
 
 							    return http.status != 404;
 							}
-
 
 							if (data.data[i].plataforma1){
 								template.find(".capa").removeClass("capaXbox");
@@ -173,6 +182,8 @@
 			    }
 			});
 		}
+
+
 
 
         return this;

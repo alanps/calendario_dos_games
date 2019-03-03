@@ -22,11 +22,7 @@ class GameController extends Controller
             $games = $games->where("nome", "LIKE", "%".$nome."%");
         }
 
-        $orderby = $request->orderby;
-        if(isset($orderby)){
-            $games = $games->orderby("lancamento", "desc");
-        }
-
+        $games = $games->orderby("lancamento", "desc");
         $games = $games->paginate($page_size);
 
         return Api::json(true, "Games listados com sucesso.", $games);

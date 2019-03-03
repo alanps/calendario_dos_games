@@ -1,0 +1,120 @@
+#page-singlegame section#singlegame {
+    z-index: 0;
+    position: relative;
+    margin: 11em 0 0em;
+    background-color: #262626;
+}
+
+#page-singlegame section#singlegame .game {
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+
+/*************************/
+/* Mais Infos            */
+/*************************/
+#page-singlegame section#singlegame .maisInfos {
+    position: relative;
+    background-color: #3D3D3D;
+    height: 45em;
+    margin-top: -8em;
+    padding: 4em;
+    margin-left: -2.2em;
+}
+
+#page-singlegame section#singlegame .ficha {
+    position: relative;
+    margin: 3em 0;
+    background-color: #494949;
+    font-family: 'Orator Std';
+    padding: 2.5em 4em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#page-singlegame section#singlegame .maisInfos h1.titulo {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Orator Std';
+    margin-bottom: 0.2em;
+}
+
+#page-singlegame section#singlegame .maisInfos .descricao {
+    line-height: 1.2em;
+    font-size: 0.9em;
+    margin-bottom: 3em;
+}
+
+#page-singlegame section#singlegame .maisInfos ul.fotos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#page-singlegame section#singlegame .maisInfos ul.fotos li.foto {
+    flex: 0 0 30%;
+    margin: 0.74em;
+}
+
+#page-singlegame section#singlegame .imagemContainer {
+    width: 100%;
+}
+
+#page-singlegame section#singlegame .imagemContainer img.imagem {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*************************/
+/* Ficha                 */
+/*************************/
+#page-singlegame section#singlegame .ficha .semana {
+    font-size: 1.3em;
+    line-height: 1em;
+    margin: 0.3em 0 0;
+}
+
+#page-singlegame section#singlegame .ficha .capa {margin: 1em auto;}
+
+#page-singlegame section#singlegame .ficha .capa img.capaGame {
+    width: 100%;
+    height: 100%;
+}
+
+#page-singlegame section#singlegame .ficha .tag {
+    background-color: #EDCB48;
+    width: fit-content;
+    padding: 0.5em 1em 0.1em;
+    color: #262626;
+    margin: 0.4em auto;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#page-singlegame section#singlegame .ficha .desenvolvedora {
+    font-size: 0.7em;
+    margin-top: 1em;
+}
+
+#page-singlegame section#singlegame .ficha .data {
+    font-size: 0.9em;
+}
+
+/*************************/
+/* Videos                */
+/*************************/
+#page-singlegame section#singlegame .game .videos {
+    margin: 3em 0;
+}
+
+#page-singlegame section#singlegame .game .videos .legenda {
+    font-family: 'Orator Std';
+    font-size: 0.7em;
+    margin: 1em;
+}
