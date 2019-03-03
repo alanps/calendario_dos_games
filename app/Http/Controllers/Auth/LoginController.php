@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Helpers\Api;
+use Helpers\Decorator;
+use Models\User;
 
 class LoginController extends Controller
 {
@@ -46,9 +49,10 @@ class LoginController extends Controller
             $user = $this->guard()->user();
             $user->generateToken();
 
-            return response()->json(
-                $user->toArray()
-            );
+            $decorators = Decorator::include(User::class, $request);
+            $user->load($decorators);
+
+            return Api::json(true, "Login feito com sucesso!", $user);
         }
 
         return $this->sendFailedLoginResponse($request);
@@ -63,6 +67,6 @@ class LoginController extends Controller
             $user->save();
         }
 
-        return response()->json('User logged out.', 200);
+        return Api::json(true, "Logout feito com sucesso!");
     }
 }

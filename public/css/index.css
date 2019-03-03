@@ -92,6 +92,7 @@
     text-transform: uppercase;
     margin-bottom: 0.4em;
     font-size: 0.8em;
+    cursor: pointer;
 }
 
 #page-index section#lancamentos .game .capa {
@@ -109,4 +110,22 @@
     font-family: "Verb";
     line-height: 1.2em;
     font-size: 1.1em;
+}
+
+#page-index section#lancamentos .game.template {
+    display: none;
+}
+
+#page-index section#lancamentos .game .tag.template {
+    display: none;
+}
+
+#page-index section#lancamentos img.loading {
+    width: 2em;
+    margin: 4.5em auto 1.5em;
+    display: none;
+}
+
+#page-index section#lancamentos.loading img.loading {
+    display: block;
 }

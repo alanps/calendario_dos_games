@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;    
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
             $view_name = str_replace('.', '-', $view->getName());
             view()->share('view_name', $view_name);
         });
+
+        Schema::defaultStringLength(191);
 
     }
 

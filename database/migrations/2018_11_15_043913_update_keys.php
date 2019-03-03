@@ -29,10 +29,6 @@ class UpdateKeys extends Migration
             $table->foreign('galeria_id')->references('id')->on('galerias');
         });
 
-        Schema::table('galerias', function (Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users');
-        });
-
         Schema::table('medias', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users');
         });

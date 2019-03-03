@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('api_token', 60)->unique()->nullable();
             $table->integer('thumbnail_id')->unsigned();
             $table->integer('nascimento')->nullable();
-            $table->tinyInteger('sexo')->nullable();
-            $table->text('observacao');
+            $table->string('sexo')->nullable();
+            $table->text('observacao')->nullable();
             $table->integer('ultimo_acesso')->nullable();
             $table->integer('created_at')->nullable();
             $table->integer('updated_at')->nullable();

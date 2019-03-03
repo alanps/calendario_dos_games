@@ -1,9 +1,9 @@
 @include('head')
 
-<link rel="stylesheet" href="{{ asset('css/sobre.css') }}">
-<script src="{{ asset('js/sobre.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('css/singlegame.css') }}">
+<script src="{{ asset('js/singlegame.js') }}"></script>
 
-<section id="sobre">
+<section id="singlegame">
 
     <div class="container">
         <div class="row">

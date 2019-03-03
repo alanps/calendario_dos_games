@@ -1,8 +1,5 @@
 <?php
 
-
-use \App\Http\Middleware\PrimeiroMiddleware;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +17,11 @@ Route::get('/', function () {
 })->name('index');
 
 
-Route::get('/games', function () {
-    return view('games');
-})->name('games');
+Route::get('/singlegame', function () {
+    return view('singlegame');
+})->name('singlegame');
 
 
 Route::get('/sobre', function () {
     return view('sobre');
 })->name('sobre');
-

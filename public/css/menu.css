@@ -90,11 +90,17 @@
 /* Submenu               */
 /*************************/
 .menu .background {
-    width: 100%;
     height: 100vh;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     z-index: 1;
+    display: none;
+    left: 0;
+    right: 0;
+}
+
+.menu .background.ativo {
+    display: block;
 }
 
 .menu .submenu {
@@ -152,13 +158,13 @@
 /*************************/
 .menu .buscador {
     background: white;
-    height: 37em;
     position: relative;
     top: -0.5em;
     right: -1em;
     margin: 1em;
-    z-index: 100;
+    z-index: 10;
     display: none;
+    padding-bottom: 0.5em;
 }
 .menu .buscador.ativo {
     display: block;
@@ -196,13 +202,17 @@
     padding: 1em;
 }
 
+.menu .buscador li.resultado.template {
+    display: none;
+}
+
 .menu .buscador li.resultado .capa {
-    width: 6em;
+    width: 5em;
     display: block;
     position: relative;
     margin-right: 1em;
-    height: 8em;
-    border-radius: 1em;
+    height: 7em;
+    border-radius: 0.4em;
     padding: 0.3em 0.3em 0.3em 0;
 }
 
@@ -214,7 +224,7 @@
 }
 
 .menu .buscador li.resultado .infos .titulo {
-    font-size: 1.2em;
+    font-size: 1.6em;
 }
 
 .menu .buscador li.resultado .infos .tag {
@@ -229,6 +239,11 @@
     font-family: "Orator Std";
     display: inline-block;
     cursor: pointer;
+    margin-right: 1em;
+}
+
+.menu .buscador li.resultado .infos .tag.template {
+    display: none;
 }
 
 .menu .buscador .paginacao {
@@ -248,10 +263,90 @@
 }
 
 .menu .buscador .paginacao .espaco {
-    margin: 0 2em;
+    margin: 0 1em;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .menu .buscador li.resultado img.capaGame {
     width: 100%;
     height: 100%;
+}
+
+.menu .buscador li.resultado .sinopse {
+    margin: 0.5em 0;
+}
+
+.menu .buscador .paginas .paginacao .anterior {
+    cursor: pointer;
+    margin: 0 auto;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.menu .buscador .paginas .paginacao .anterior.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu .buscador .paginas .paginacao .proximo {
+    margin: 0 auto;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.menu .buscador .paginas .paginacao .proximo.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu .buscador .paginas .paginacao .pagina {
+    cursor: pointer;
+    margin: 0 1em;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.menu .buscador .paginas .paginacao .pagina.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menu .buscador .paginas .paginacao .numeros {
+    display: flex;
+}
+
+.menu .buscador .paginas .paginacao .numeros .pagina.template {
+    display: none;
+    margin: 0 1em;
+}
+
+.menu .buscador .no-results.ativo {
+    display: block;
+}
+
+.menu .buscador .no-results {
+    display: none;
+    text-align: center;
+    margin: 4.5em 4em 3.5em;
+    line-height: 1em;
+}
+
+.menu .buscador.loading .no-results {
+    display: none;
+}
+
+.menu .buscador[data-total="0"] .paginas {
+    display: none;
+}
+
+.menu .buscador img.loading {
+    width: 2em;
+    margin: 4.5em auto 3.5em;
+    display: none;
+}
+
+.menu .buscador.loading img.loading {
+    display: block;
 }

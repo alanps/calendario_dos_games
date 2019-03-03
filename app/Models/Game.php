@@ -25,7 +25,9 @@ class Game extends Model
     ///////////////////////
     //decorators
     const decorators = [
-        'genero1', 'genero2', 'genero3', 'plataforma1', 'plataforma2', 'plataforma3', 'desenvolvedora', 'galeria'
+        'genero1', 'genero2', 'genero3', 'genero4', 'genero5', 
+        'plataforma1', 'plataforma2', 'plataforma3', 'plataforma4', 'plataforma5',
+         'desenvolvedora', 'galeria', 'galeria.galeriamedia.media', 'galeria.galeriamedia.plataforma'
     ];
 
     public function genero1()
@@ -39,6 +41,16 @@ class Game extends Model
     }
 
     public function genero3()
+    {
+        return $this->belongsTo(Genero::class);
+    }
+
+    public function genero4()
+    {
+        return $this->belongsTo(Genero::class);
+    }
+
+    public function genero5()
     {
         return $this->belongsTo(Genero::class);
     }
@@ -57,6 +69,17 @@ class Game extends Model
     {
         return $this->belongsTo(Plataforma::class);
     }
+
+    public function plataforma4()
+    {
+        return $this->belongsTo(Plataforma::class);
+    }
+
+    public function plataforma5()
+    {
+        return $this->belongsTo(Plataforma::class);
+    }
+
 
     public function desenvolvedora()
     {

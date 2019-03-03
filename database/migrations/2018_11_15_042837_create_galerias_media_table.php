@@ -16,6 +16,7 @@ class CreateGaleriasMediaTable extends Migration
         Schema::create('galerias_media', function (Blueprint $table) {
             $table->integer('galeria_id')->unsigned();
             $table->integer('media_id')->unsigned();
+            $table->integer('plataforma_id')->unsigned();
             $table->integer('created_at')->nullable();
             $table->integer('updated_at')->nullable();
             $table->integer('deleted_at')->nullable();

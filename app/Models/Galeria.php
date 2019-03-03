@@ -19,4 +19,17 @@ class Galeria extends Model
         'deleted_at',
     ];
 
+    ///////////////////////
+    //decorators
+    const decorators = [
+        'galeriamedia',
+    ];
+
+    public function galeriamedia()
+    {
+        return $this->hasMany(GaleriasMedia::class);
+    }
+
+
+
 }

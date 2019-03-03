@@ -16,8 +16,6 @@ class CreateGaleriasTable extends Migration
         Schema::create('galerias', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->text('descricao');
-            $table->integer('user_id')->unsigned();
             $table->integer('created_at')->nullable();
             $table->integer('updated_at')->nullable();
             $table->integer('deleted_at')->nullable();

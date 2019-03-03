@@ -55,13 +55,13 @@
 										<span class="titulo">Xbox One</span>
 									</div>
 									<ul class="submenuItens">
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem todosOsGames">Todos os Games</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem lancamentos">Lançamentos</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem porgenero">Por Genêro</li>
 										</a>
 									</ul>
@@ -75,13 +75,13 @@
 										<span class="titulo">Xbox 360</span>
 									</div>
 									<ul class="submenuItens">
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem todosOsGames">Todos os Games</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem lancamentos">Lançamentos</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem porgenero">Por Genêro</li>
 										</a>
 									</ul>
@@ -95,13 +95,13 @@
 										<span class="titulo">Playstation 4</span>
 									</div>
 									<ul class="submenuItens">
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem todosOsGames">Todos os Games</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem lancamentos">Lançamentos</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem porgenero">Por Genêro</li>
 										</a>
 									</ul>
@@ -115,13 +115,13 @@
 										<span class="titulo">Playstation 3</span>
 									</div>
 									<ul class="submenuItens">
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem todosOsGames">Todos os Games</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem lancamentos">Lançamentos</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem porgenero">Por Genêro</li>
 										</a>
 									</ul>
@@ -135,13 +135,13 @@
 										<span class="titulo">PC</span>
 									</div>
 									<ul class="submenuItens">
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem todosOsGames">Todos os Games</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem lancamentos">Lançamentos</li>
 										</a>
-										<a href="{{ route('index') }}">
+										<a href="{{ route('singlegame') }}">
 											<li class="submenuItem porgenero">Por Genêro</li>
 										</a>
 									</ul>
@@ -163,66 +163,36 @@
 			<div class="col-md-6">
 				<div class="buscador">
 					<div class="detalhes">
-						<span class="buscandopor">Buscando por: <span class="buscandopor_value">Far Cry 5</span></span>
-						<span class="total">Total de <span class="total_value">3</span> itens encontrados</span>
+						<span class="buscandopor">Buscando por: <span class="buscandopor_value"></span></span>
+						<span class="total">Total de <span class="total_value"></span> itens encontrados</span>
 					</div>
 					<ul class="resultados">
-						<li class="resultado resultado1">
-							<div class="capa capaPC">
-	                            <img class="capaGame" src="{{ asset('images/capas/xbox360/fifa19.jpg') }}">
+						<li class="resultado template">
+							<div class="capa">
+	                            <img class="capaGame" src="">
 	                        </div>
 							<div class="infos">
-								<div class="titulo">Far Cry 5</div>
-								<div class="descricao">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </div>
-								<div class="lancamento">Lançamento: <span class="lancamento_value">2018</span></div>
+								<h3 class="titulo"></h3>
+								<div class="sinopse"></div>
 								<div class="generos">
-									<div class="tag acao">Ação</div>
-									<div class="tag shooter">Shooter</div>
-								</div>
-							</div>
-						</li>
-						<li class="resultado resultado2">
-							<div class="capa capaXbox">
-	                            <img class="capaGame" src="{{ asset('images/capas/xbox360/fifa19.jpg') }}">
-	                        </div>
-							<div class="infos">
-								<div class="titulo">Far Cry 5</div>
-								<div class="descricao">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </div>
-								<div class="lancamento">Lançamento: <span class="lancamento_value">2018</span></div>
-								<div class="generos">
-									<div class="tag acao">Ação</div>
-									<div class="tag shooter">Shooter</div>
-								</div>
-							</div>
-						</li>
-						<li class="resultado resultado3">
-							<div class="capa capaPlaystation4">
-	                            <img class="capaGame" src="{{ asset('images/capas/xbox360/fifa19.jpg') }}">
-	                        </div>
-							<div class="infos">
-								<div class="titulo">Far Cry 5</div>
-								<div class="descricao">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </div>
-								<div class="lancamento">Lançamento: <span class="lancamento_value">2018</span></div>
-								<div class="generos">
-									<div class="tag acao">Ação</div>
-									<div class="tag shooter">Shooter</div>
+									<div class="tag template">Template</div>
 								</div>
 							</div>
 						</li>
 					</ul>
+					<div class="no-results ativo">Nada encontrado!</div>
+					<img src="{{ asset('images/loading.svg') }}" class="loading">
 					<div class="paginas">
 						<div class="paginacao">
 							<div class="anterior">Anterior</div>
 							<div class="espaco">|</div>
-							<div class="pagina pagina1">1</div>
-							<div class="espaco">-</div>
-							<div class="pagina pagina2">2</div>
-							<div class="espaco">-</div>
-							<div class="pagina pagina3">3</div>
+							<div class="numeros">
+								<div class="pagina template">1</div>
+							</div>
 							<div class="espaco">|</div>
 							<div class="proximo">Próxima</div>
 						</div>
-						<div class="total">Página 1 de 10</div>
+						<div class="total">Página <span class="pagina">1</span> de <span class="total_pagina">1</span></div>
 					</div>
 				</div>
 			</div>
