@@ -31,7 +31,7 @@
 			<div class="col-md-4">
 				<div class="busca">
 					<label for="inputBusca">Buscar:</label>
-					<input name="inputBusca" id="inputBusca" type="text" placeholder="digite o nome do jogo">
+					<input name="inputBusca" id="inputBusca" type="text" autocomplete="off" placeholder="digite o nome do jogo">
 					<span class="icon-search"></span>
 				</div>
 			</div>

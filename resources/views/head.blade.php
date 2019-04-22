@@ -4,6 +4,7 @@
     <title>Calendário dos Games</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
+    <meta name="author" content="Alan Pardini Sant'Ana" />
        
     <!-- visualização mobile ===================================================== -->
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
