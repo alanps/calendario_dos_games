@@ -15,6 +15,14 @@
 	    //iniciar
         $(document).ready(function(){
             moment.locale('pt-BR');
+            moment.updateLocale('pt-BR', {
+                weekdays : [
+                    "Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"
+                ],
+                months : [
+                  "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+                ]
+            });
             lista();
         });
 
@@ -128,6 +136,26 @@
         //el.addClass("loading");
 
         function lista() {
+
+            $.ajax({
+                url: window.homepath + "salvarClique/"+game,
+                method: 'POST',
+                dataType: 'json',
+                beforeSend: function (data) {
+                   data.setRequestHeader("Authorization", "Bearer "+window.token);
+                },
+                success: function (data) {
+                    if (data.success == true){
+
+                    } else {
+
+                    }
+                },
+                error: function(response) {
+
+                }
+            });
+
             $.ajax({
                 url: window.homepath + "buscarGame/"+game+"?include=genero1,genero2,genero3,genero4,genero5,plataforma1,plataforma2,plataforma3,plataforma4,plataforma5,desenvolvedora,galeria,galeria.galeriamedia,galeria.galeriamedia.media,galeria.galeriamedia.plataforma",
                 method: 'GET',
@@ -157,30 +185,27 @@
 
                         var gameplayCount = 0;
                         var trailerCount = 0;
-                        var screenshots = 0;
+                        var screenshotsCount = 0;
                         $.each(data.data[0].galeria.galeriamedia, function(i, item) {
 
                             if (data.data[0].galeria.galeriamedia[i].tipo == "screenshot"){
                                 if (data.data[0].galeria.galeriamedia[i]){
                                     if (data.data[0].galeria.galeriamedia[i].media.url){
 
-                                        screenshots++;
+                                        screenshotsCount++;
                                         var capa = data.data[0].galeria.galeriamedia[i].media.url;
                                         var position = capa.length - 4;
 
                                         var imageExist = imageExists(window.uploadspath + data.data[0].galeria.galeriamedia[i].media.url);
                                         if (imageExist == true){
-                                            var foto = el.find(".game .fotos .foto.template").clone().appendTo(el.find( ".game .fotos")).removeClass("template").addClass("foto"+screenshots);
+                                            var foto = el.find(".game .fotos .foto.template").clone().appendTo(el.find( ".game .fotos")).removeClass("template").addClass("foto"+screenshotsCount);
                                             foto.find(".imagem").attr("src", window.uploadspath + data.data[0].galeria.galeriamedia[i].media.url);
                                         } else if (imageExist == false){
-                                            el.find(".titulo_galeria").hide();
                                             urlCapa = window.homepath + "images/notfound.png";
                                         }
 
                                     }
                                 }
-                            } else {
-                                el.find(".titulo_galeria").hide();
                             }
 
                             if (data.data[0].galeria.galeriamedia[i].tipo == "capa"){
@@ -210,6 +235,9 @@
                         });
 
 
+                        if (screenshotsCount == 0){
+                            el.find(".titulo_galeria").hide();
+                        }
                         if (trailerCount == 0){
                             el.find(".trailerContainer").hide();
                         }

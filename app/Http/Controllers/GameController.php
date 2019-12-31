@@ -31,10 +31,24 @@ class GameController extends Controller
             $games = $games->where("plataforma", "LIKE", "%".$nome."%");
         }
 
-        $games = $games->orderby("lancamento", "desc");
+        $cliques = $request->cliques;
+        if(isset($cliques)){
+            $games = $games->orderby("cliques", $cliques);
+        } else {
+            $games = $games->orderby("lancamento", "desc");
+        }
+
         $games = $games->paginate($page_size);
 
         return Api::json(true, "Games listados com sucesso.", $games);
+    }
+
+    public function salvarClique(Request $request, Game $game)
+    {
+        $cliques = $game->cliques+1;
+        $game->update(array('cliques' => $cliques));
+
+        return Api::json(true, "Clique salvo com sucesso.", $game);
     }
 
 }

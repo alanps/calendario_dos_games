@@ -26,10 +26,10 @@
                             <span class="mes"></span>
                             <span class="ano"></span>
                         </div>
-                        <div class="capa">
+                        <a href="{{ route('singlegame') }}" class="capa">
                             <img class="capaGame" src="">
-                        </div>
-                        <div class="titulo"></div>
+                        </a>
+                        <a href="{{ route('singlegame') }}" class="titulo"></a>
                         <div class="tag template"></div>
                     </li>
                 </ul>

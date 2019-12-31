@@ -16,14 +16,14 @@
 
 			<div class="col-md-6">
 				<ul class="menuItens">
-					<a href="{{ route('index') }}">
-						<li class="menuItem menuItemInicial">Página Inicial</li>
+					<a href="{{ route('index') }}" class="menuItemInicial">
+						<li class="menuItem">Página Inicial</li>
 					</a>
-					<a href="#" class="ativarSubmenu">
-						<li class="menuItem menuItemLancamentos">Games</li>
+					<a href="#" class="ativarSubmenu" class="menuItemLancamentos">
+						<li class="menuItem">Games</li>
 					</a>
-					<a href="{{ route('sobre') }}">
-						<li class="menuItem menuItemSobre">Sobre</li>
+					<a href="{{ route('sobre') }}" class="menuItemSobre">
+						<li class="menuItem">Sobre</li>
 					</a>
 				</ul>
 			</div>
@@ -44,111 +44,81 @@
 				<div class="background"></div>
 
 				<div class="submenu" style="display: none;">
-					
-					<div class="container containerSubmenu">
-						<div class="row">
+			
+					<div class="linha linha1">
+						<div class="titulo">Categorias</div>
+						<ul class="submenuItens">
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem acao">ação</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem aventura">aventura</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem corrida">corrida</li>
+							</a>
+						</ul>
+					</div>
 
-							<div class="col-md-2">
-								<div class="xboxOne">
-									<div class="console">
-										<span class="icon icon-xbox"></span>
-										<span class="titulo">Xbox One</span>
-									</div>
-									<ul class="submenuItens">
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem todosOsGames">Todos os Games</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem lancamentos">Lançamentos</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem porgenero">Por Genêro</li>
-										</a>
-									</ul>
-								</div>
-							</div>
+					<div class="linha linha2">
+						<ul class="submenuItens">
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem esporte">esporte</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem estrategia">estratégia</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem fitness">fitness</li>
+							</a>
+						</ul>
+					</div>
 
-							<div class="col-md-2">
-								<div class="xbox360">
-									<div class="console">
-										<span class="icon icon-xbox"></span>
-										<span class="titulo">Xbox 360</span>
-									</div>
-									<ul class="submenuItens">
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem todosOsGames">Todos os Games</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem lancamentos">Lançamentos</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem porgenero">Por Genêro</li>
-										</a>
-									</ul>
-								</div>
-							</div>
+					<div class="linha linha3">
+						<ul class="submenuItens">
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem luta">luta</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem rpg">rpg</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem mmo">mmo</li>
+							</a>
+						</ul>
+					</div>
 
-							<div class="col-md-2">
-								<div class="playstation4">
-									<div class="console">
-										<span class="icon icon-playstation4"></span>
-										<span class="titulo">Playstation 4</span>
-									</div>
-									<ul class="submenuItens">
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem todosOsGames">Todos os Games</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem lancamentos">Lançamentos</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem porgenero">Por Genêro</li>
-										</a>
-									</ul>
-								</div>
-							</div>
+					<div class="linha linha4">
+						<ul class="submenuItens">
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem simulacao">simulação</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem shooter">shooter</li>
+							</a>
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem terror">terror</li>
+							</a>
+						</ul>
+					</div>
 
-							<div class="col-md-2">
-								<div class="playstation3">
-									<div class="console">
-										<span class="icon icon-playstation3"></span>
-										<span class="titulo">Playstation 3</span>
-									</div>
-									<ul class="submenuItens">
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem todosOsGames">Todos os Games</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem lancamentos">Lançamentos</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem porgenero">Por Genêro</li>
-										</a>
-									</ul>
-								</div>
-							</div>
+					<div class="linha linha5">
+						<ul class="submenuItens">
+							<a href="{{ route('singlegame') }}">
+								<li class="submenuItem vertodos">ver todos</li>
+							</a>
+						</ul>
+					</div>
 
-							<div class="col-md-2">
-								<div class="pc">
-									<div class="console">
-										<span class="icon icon-windows"></span>
-										<span class="titulo">PC</span>
-									</div>
-									<ul class="submenuItens">
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem todosOsGames">Todos os Games</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem lancamentos">Lançamentos</li>
-										</a>
-										<a href="{{ route('singlegame') }}">
-											<li class="submenuItem porgenero">Por Genêro</li>
-										</a>
-									</ul>
-								</div>
-							</div>
-
-						</div>
+					<div class="linha linha6">
+						<div class="titulo">Destaques</div>
+						<ul class="submenuDestaquesItens">
+							<a href="{{ route('singlegame') }}" class="submenuDestaqueItem template">
+								<li class="capa">
+		                            <img class="capaGame" src="">
+		                        </li>
+							</a>
+						</ul>
 					</div>
 
 				</div>

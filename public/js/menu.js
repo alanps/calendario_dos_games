@@ -19,12 +19,14 @@
 		    var page_size;
 			var nomeGame;
 		    iniciar();
+		    destaques();
 	    });
 
 	    function iniciar(){
 		    pagina = 1;
 		    paginas = 1;
 		    page_size = 3;
+		    page_size_destaques = 5;
 			nomeGame = el.find("#inputBusca").val();
 			el.find(".paginacao .proximo").addClass("ativo");
 			el.find(".paginacao .anterior").removeClass("ativo");
@@ -67,6 +69,61 @@
 
 
     	////////////////////////////////
+	    //menu destaques
+		function destaques(data){
+			$.ajax({
+	            url: window.homepath + "buscarGame/?include=genero1,genero2,genero3,genero4,genero5,plataforma1,plataforma2,plataforma3,plataforma4,plataforma5,desenvolvedora,galeria,galeria.galeriamedia,galeria.galeriamedia.media,galeria.galeriamedia.plataforma",
+	            method: 'GET',
+	            dataType: 'json',
+			    data: {page_size: page_size_destaques, cliques: "desc"},
+			    beforeSend: function (data) {
+	               data.setRequestHeader("Authorization", "Bearer "+window.token);
+	            },
+	            success: function (data) {
+	                if (data.success == true){
+
+						function imageExists(image_url){
+						    var http = new XMLHttpRequest();
+
+						    http.open('HEAD', image_url, false);
+						    http.send();
+
+						    return http.status != 404;
+						}
+
+			            $.each(data.data, function(i, item) {
+
+		               		$.each(data.data[i].galeria.galeriamedia, function(b, item) {
+		               			if (data.data[i].galeria.galeriamedia[b].tipo == "capa"){
+									var urlCapa = window.uploadspath + data.data[i].galeria.galeriamedia[b].media.url;
+									var imageExist = imageExists(urlCapa);
+									if (imageExist == false){
+			                            urlCapa = window.homepath + "images/notfound.png";
+									}
+									
+									var template = el.find(".linha6 .submenuDestaquesItens .submenuDestaqueItem.template").clone().appendTo(el.find( ".linha6 .submenuDestaquesItens")).removeClass("template").addClass("capa"+i);
+									template.find(".capaGame").attr("src", urlCapa);
+									template.attr("href", window.homepath+"singlegame?game="+data.data[i].id);
+								}
+			    			});
+
+			    		});
+
+	                } else {
+
+	                }
+	            },
+			    error: function(response) {
+
+			    }
+			});
+		}
+    	////////////////////////////////
+    	////////////////////////////////
+    	////////////////////////////////
+
+
+    	////////////////////////////////
 	    //busca
 	    var buscadorTimer;
 	    el.find("#inputBusca").on('keyup',function(e) {
@@ -103,7 +160,7 @@
 	            url: window.homepath + "buscarGame/?include=genero1,genero2,genero3,genero4,genero5,plataforma1,plataforma2,plataforma3,plataforma4,plataforma5,desenvolvedora,galeria,galeria.galeriamedia,galeria.galeriamedia.media,galeria.galeriamedia.plataforma",
 	            method: 'GET',
 	            dataType: 'json',
-			    data: {page_size: page_size, page: pagina, nome: nomeGame},
+			    data: {page_size: page_size, page: pagina, nome: nomeGame, cliques: "desc"},
 			    beforeSend: function (data) {
 	               data.setRequestHeader("Authorization", "Bearer "+window.token);
 	            },

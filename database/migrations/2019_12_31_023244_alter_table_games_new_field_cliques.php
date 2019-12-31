@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableGaleriasMediaNewField extends Migration
+class AlterTableGamesNewFieldCliques extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterTableGaleriasMediaNewField extends Migration
      */
     public function up()
     {
-        Schema::table('galerias_media', function (Blueprint $table) {
-            $table->string('tipo')->default("screenshot")->after('plataforma_id');
+        Schema::table('games', function (Blueprint $table) {
+            $table->integer('cliques')->default(0)->after('lancamento');
         });
     }
 
@@ -25,8 +25,8 @@ class AlterTableGaleriasMediaNewField extends Migration
      */
     public function down()
     {
-        Schema::table('galerias_media', function (Blueprint $table) {
-            $table->dropColumn('tipo');
+        Schema::table('games', function (Blueprint $table) {
+            $table->dropColumn('cliques');
         });
     }
 }

@@ -12,7 +12,7 @@ class Game extends Model
     protected $dateFormat = 'U';
     
     protected $fillable = [
-        'nome', 'descricao', 'trailer_lancamento', 'trailer_gameplay', 'lancamento',
+        'nome', 'descricao', 'trailer_lancamento', 'trailer_gameplay', 'lancamento', 'cliques'
     ];
 
     protected $hidden = [

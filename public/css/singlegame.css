@@ -71,6 +71,7 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
+    border: 2px solid black;
 }
 
 #page-singlegame section#singlegame .trailerContainer .gameplay {
@@ -86,21 +87,22 @@
 /* Ficha                 */
 /*************************/
 #page-singlegame section#singlegame .ficha .semana {
-    font-size: 1.15em;
+    font-size: 0.6em;
     line-height: 1em;
     margin: 0.3em 0 0;
 }
 
 #page-singlegame section#singlegame .ficha .capa {
     margin: 1em auto 1.2em;
-    width: 8em;
+    width: 10em;
     height: 11em;
 }
 
 #page-singlegame section#singlegame .ficha .capa img.capaGame {
     width: 100%;
     height: 100%;
-    /* border: 0.2em solid black; */
+    border: 2px solid black;
+    /* border-radius: 1em; */
 }
 
 #page-singlegame section#singlegame .ficha .tag {
@@ -193,6 +195,10 @@
     font-weight: bold;
 }
 
+#page-singlegame section#singlegame .game .videos video {
+    outline: 0;
+}
+
 /*************************/
 /* Loading               */
 /*************************/
@@ -264,7 +270,7 @@
     transform: translate(-50%, -50%);
     height: 50%;
     border: 1em solid white;
-    max-width: 48em;
+    max-width: 65em;
 }
 
 #page-singlegame .lightbox_div .seta {

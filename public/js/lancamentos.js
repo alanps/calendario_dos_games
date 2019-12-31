@@ -52,6 +52,8 @@
 							template.find(".data .mes").html(moment.unix(data.data[i].lancamento).format('MMMM'));
 							template.find(".data .ano").html(moment.unix(data.data[i].lancamento).format('YYYY'));
 
+							template.find(".capa").attr("href", window.homepath+"singlegame?game="+data.data[i].id);
+							template.find(".titulo").attr("href", window.homepath+"singlegame?game="+data.data[i].id);
 
 							function imageExists(image_url){
 							    var http = new XMLHttpRequest();
@@ -62,29 +64,6 @@
 							    return http.status != 404;
 							}
 
-							if (data.data[i].plataforma1){
-								template.find(".capa").removeClass("capaXbox");
-								template.find(".capa").removeClass("capaPlaystation3");
-								template.find(".capa").removeClass("capaPlaystation4");
-								template.find(".capa").removeClass("capaPC");
-								if (data.data[i].plataforma1.nome == "Xbox One" || data.data[i].plataforma1.nome == "Xbox 360"){
-									template.find(".capa").addClass("capaXbox");
-									var plataforma1 = "_xboxone";
-								} else if (data.data[i].plataforma1.nome == "Xbox 360"){
-									template.find(".capa").addClass("capaXbox");
-									var plataforma1 = "_xbox360";
-								} else if (data.data[i].plataforma1.nome == "Playstation 3"){
-									template.find(".capa").addClass("capaPlaystation3");
-									var plataforma1 = "_ps3";
-								} else if (data.data[i].plataforma1.nome == "Playstation 4"){
-									template.find(".capa").addClass("capaPlaystation4");
-									var plataforma1 = "_ps4";
-								} else if (data.data[i].plataforma1.nome == "PC"){
-									template.find(".capa").addClass("capaPC");
-									var plataforma1 = "_pc";
-								}
-							}
-
 							var capa = window.homepath + "images/notfound.png";
 		               		$.each(data.data[i].galeria.galeriamedia, function(b, item) {
 		               			var c = 0;
@@ -93,16 +72,13 @@
 									c = 1;
 								}
 							});
-
-							var position = capa.length - 4;
-							var urlCapa = [capa.slice(0, position), capa.slice(position)].join('');
-
-							var imageExist = imageExists(urlCapa);
+							
+							var imageExist = imageExists(capa);
 							if (imageExist == false){
 								urlCapa = window.homepath + "images/notfound.png";
 							}
 
-							template.find(".capa .capaGame").attr("src", urlCapa);
+							template.find(".capa .capaGame").attr("src", capa);
 
 							if (data.data[i].genero1){
 								var generos = template.find(".tag.template").clone().appendTo(template).removeClass("template").addClass(data.data[i].genero1.nome);
