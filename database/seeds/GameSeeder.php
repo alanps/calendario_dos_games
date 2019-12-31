@@ -50,6 +50,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media1->id,
             'plataforma_id'  => 1,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -69,6 +70,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media2->id,
             'plataforma_id'  => 4,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -116,6 +118,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media->id,
             'plataforma_id'  => 1,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -162,6 +165,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media->id,
             'plataforma_id'  => 1,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -207,6 +211,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media->id,
             'plataforma_id'  => 1,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -252,6 +257,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media->id,
             'plataforma_id'  => 4,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 
@@ -297,6 +303,7 @@ class GameSeeder extends Seeder
             'galeria_id'  => $galeria->id,
             'media_id'  => $media->id,
             'plataforma_id'  => 1,
+            'capa'  => 0
         ]);
         $galeria_media->save();
 

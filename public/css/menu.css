@@ -186,28 +186,28 @@
     flex: 1;
 }
 
-.menu .buscador li.resultado.resultado1 {
+.menu .buscador .resultado.resultado1 {
     background-color: #FFFFFF;
 }
 
-.menu .buscador li.resultado.resultado2 {
+.menu .buscador .resultado.resultado2 {
     background-color: #F7F7F7;
 }
 
-.menu .buscador li.resultado.resultado3 {
+.menu .buscador .resultado.resultado3 {
     background-color: #EAEAEA;
 }
 
-.menu .buscador li.resultado {
+.menu .buscador .resultado {
     display: flex;
-    padding: 1em;
+    padding: 0.98em;
 }
 
-.menu .buscador li.resultado.template {
+.menu .buscador .resultado.template {
     display: none;
 }
 
-.menu .buscador li.resultado .capa {
+.menu .buscador .resultado .capa {
     width: 5em;
     display: block;
     position: relative;
@@ -217,33 +217,35 @@
     padding: 0.3em 0.3em 0.3em 0;
 }
 
-.menu .buscador li.resultado .infos {
+.menu .buscador .resultado .infos {
     flex: 1;
     font-family: "Verb";
     font-size: 0.7em;
     text-transform: none;
 }
 
-.menu .buscador li.resultado .infos .titulo {
+.menu .buscador .resultado .infos .titulo {
     font-size: 1.6em;
 }
 
-.menu .buscador li.resultado .infos .tag {
+.menu .buscador .resultado .infos .tag {
     background-color: #EDCB48;
     width: fit-content;
     padding: 0.5em 1em 0.1em;
     color: #262626;
-    line-height: 1em;
     text-transform: uppercase;
     margin-bottom: 0.4em;
     font-size: 0.8em;
     font-family: "Orator Std";
-    display: inline-block;
     cursor: pointer;
     margin-right: 1em;
 }
 
-.menu .buscador li.resultado .infos .tag.template {
+.menu .buscador .resultado .infos .generos {
+    display: flex;
+}
+
+.menu .buscador .resultado .infos .tag.template {
     display: none;
 }
 
@@ -277,12 +279,12 @@
     pointer-events: none;
 }
 
-.menu .buscador li.resultado img.capaGame {
+.menu .buscador .resultado img.capaGame {
     width: 100%;
     height: 100%;
 }
 
-.menu .buscador li.resultado .sinopse {
+.menu .buscador .resultado .sinopse {
     margin: 0.5em 0;
 }
 
@@ -329,6 +331,7 @@
 .menu .buscador .paginas .paginacao .numeros {
     display: flex;
     position: relative;
+    min-width: 2.6em;
 }
 
 .menu .buscador .paginas .paginacao .numeros .pagina.template {
@@ -352,20 +355,19 @@
 }
 
 .menu .buscador[data-total="0"] .paginas {
-    display: none;
+    /* display: none; */
 }
 
-.menu .buscador img.loading {
+.menu .buscador img.loadingCentral {
     width: 2em;
-    margin: 4.5em auto 3.5em;
+    margin: 3.8em auto 3.2em;
     display: none;
+    position: relative;
+    text-align: center;
 }
 
-.menu .buscador.loading img.loading {
-    display: block;
-}
-
-.menu .buscador.loading img.loadingPages {
+.menu .buscador .paginacao .numeros img.loading {
+    display: none;
     width: 2em;
     margin: 0 auto;
     height: 1em;
@@ -374,9 +376,56 @@
     transform: translateX(-50%);
     text-align: center;
     top: -0.3em;
-    display: block;
 }
 
-.menu .buscador img.loadingPages {
+.menu .buscador .detalhes .buscandopor img.loading {
     display: none;
+    width: 2em;
+    margin: 0;
+    height: 1em;
+    position: absolute;
+    text-align: -webkit-left;
+    top: 1.8em;
+    left: 9.8em;
+}
+
+.menu .buscador .detalhes .total img.loading {
+    display: none;
+    width: 2em;
+    margin: 0;
+    height: 1em;
+    position: absolute;
+    text-align: -webkit-left;
+    top: 1.8em;
+    right: 12.1em;
+}
+
+.menu .buscador .paginas .total img.loading:nth-child(5) {
+    display: none;
+    width: 2em;
+    margin: 0;
+    height: 1em;
+    position: absolute;
+    text-align: -webkit-left;
+    bottom: 0.9em;
+    right: 20.8em;
+}
+
+.menu .buscador .paginas .total img.loading:nth-child(2) {
+    display: none;
+    width: 2em;
+    margin: 0;
+    height: 1em;
+    position: absolute;
+    text-align: -webkit-left;
+    bottom: 0.9em;
+    right: 23.8em;
+}
+
+.menu .buscador.loading img.loading {
+    display: block !important;
+}
+
+.menu .buscador.loading img.loadingCentral {
+    display: block !important;
 }

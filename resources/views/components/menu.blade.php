@@ -163,11 +163,20 @@
 			<div class="col-md-6">
 				<div class="buscador">
 					<div class="detalhes">
-						<span class="buscandopor">Buscando por: <span class="buscandopor_value"></span></span>
-						<span class="total">Total de <span class="total_value"></span> itens encontrados</span>
+						<span class="buscandopor">
+							<span class="texto">Buscando por: </span>
+							<img src="{{ asset('images/loading.svg') }}" class="loading">
+							<span class="buscandopor_value"></span>
+						</span>
+						<span class="total">
+							<span class="texto">Total de </span>
+							<img src="{{ asset('images/loading.svg') }}" class="loading">
+							<span class="total_value"></span> 
+							<span class="texto">itens encontrados</span>
+						</span>
 					</div>
 					<ul class="resultados">
-						<li class="resultado template">
+						<a class="resultado template">
 							<div class="capa">
 	                            <img class="capaGame" src="">
 	                        </div>
@@ -178,22 +187,29 @@
 									<div class="tag template">Template</div>
 								</div>
 							</div>
-						</li>
+						</a>
 					</ul>
 					<div class="no-results ativo">Nada encontrado!</div>
-					<img src="{{ asset('images/loading.svg') }}" class="loading">
+					<img src="{{ asset('images/loading.svg') }}" class="loadingCentral">
 					<div class="paginas">
 						<div class="paginacao">
 							<div class="anterior">Anterior</div>
 							<div class="espaco">|</div>
 							<div class="numeros">
-								<img src="{{ asset('images/loading.svg') }}" class="loadingPages">
+								<img src="{{ asset('images/loading.svg') }}" class="loading">
 								<div class="pagina template">1</div>
 							</div>
 							<div class="espaco">|</div>
 							<div class="proximo">Próxima</div>
 						</div>
-						<div class="total">Página <span class="pagina">1</span> de <span class="total_pagina">1</span></div>
+						<div class="total">
+							<span class="texto">Página </span>
+							<img src="{{ asset('images/loading.svg') }}" class="loading">
+							<span class="pagina">1</span>
+							<span class="texto"> de </span>
+							<img src="{{ asset('images/loading.svg') }}" class="loading">
+							<span class="total_pagina">1</span>
+						</div>
 					</div>
 				</div>
 			</div>

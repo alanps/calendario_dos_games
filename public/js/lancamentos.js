@@ -48,9 +48,9 @@
 
 							template.find(".titulo").html(data.data[i].nome);
 
-							template.find(".data .dia").html(moment.unix(data.data[i].lancamento).add('days', 1).format('DD'));
-							template.find(".data .mes").html(moment.unix(data.data[i].lancamento).add('days', 1).format('MMMM'));
-							template.find(".data .ano").html(moment.unix(data.data[i].lancamento).add('days', 1).format('YYYY'));
+							template.find(".data .dia").html(moment.unix(data.data[i].lancamento).format('DD'));
+							template.find(".data .mes").html(moment.unix(data.data[i].lancamento).format('MMMM'));
+							template.find(".data .ano").html(moment.unix(data.data[i].lancamento).format('YYYY'));
 
 
 							function imageExists(image_url){
@@ -85,70 +85,20 @@
 								}
 							}
 
-							var capa = window.uploadspath + data.data[i].galeria.galeriamedia[0].media.url;
+							var capa = window.homepath + "images/notfound.png";
+		               		$.each(data.data[i].galeria.galeriamedia, function(b, item) {
+		               			var c = 0;
+		               			if (data.data[i].galeria.galeriamedia[b].tipo == "capa" && c == 0){
+									capa = window.uploadspath + data.data[i].galeria.galeriamedia[b].media.url;
+									c = 1;
+								}
+							});
+
 							var position = capa.length - 4;
-							var urlCapa = [capa.slice(0, position), plataforma1, capa.slice(position)].join('');
+							var urlCapa = [capa.slice(0, position), capa.slice(position)].join('');
 
 							var imageExist = imageExists(urlCapa);
 							if (imageExist == false){
-
-								if (data.data[i].plataforma2){
-									template.find(".capa").removeClass("capaXbox");
-									template.find(".capa").removeClass("capaPlaystation3");
-									template.find(".capa").removeClass("capaPlaystation4");
-									template.find(".capa").removeClass("capaPC");
-									if (data.data[i].plataforma2.nome == "Xbox One" || data.data[i].plataforma2.nome == "Xbox 360"){
-										template.find(".capa").addClass("capaXbox");
-										var plataforma2 = "_xboxone";
-									} else if (data.data[i].plataforma2.nome == "Xbox 360"){
-										template.find(".capa").addClass("capaXbox");
-										var plataforma2 = "_xbox360";
-									} else if (data.data[i].plataforma2.nome == "Playstation 3"){
-										template.find(".capa").addClass("capaPlaystation3");
-										var plataforma2 = "_ps3";
-									} else if (data.data[i].plataforma2.nome == "Playstation 4"){
-										template.find(".capa").addClass("capaPlaystation4");
-										var plataforma2 = "_ps4";
-									} else if (data.data[i].plataforma2.nome == "PC"){
-										template.find(".capa").addClass("capaPC");
-										var plataforma2 = "_pc";
-									}
-								}
-
-								urlCapa = [capa.slice(0, position), plataforma2, capa.slice(position)].join('');
-							}
-
-							var imageExist2 = imageExists(urlCapa);
-							if (imageExist2 == false){
-
-								if (data.data[i].plataforma3){
-									template.find(".capa").removeClass("capaXbox");
-									template.find(".capa").removeClass("capaPlaystation3");
-									template.find(".capa").removeClass("capaPlaystation4");
-									template.find(".capa").removeClass("capaPC");
-									if (data.data[i].plataforma3.nome == "Xbox One" || data.data[i].plataforma3.nome == "Xbox 360"){
-										template.find(".capa").addClass("capaXbox");
-										var plataforma3 = "_xboxone";
-									} else if (data.data[i].plataforma3.nome == "Xbox 360"){
-										template.find(".capa").addClass("capaXbox");
-										var plataforma3 = "_xbox360";
-									} else if (data.data[i].plataforma3.nome == "Playstation 3"){
-										template.find(".capa").addClass("capaPlaystation3");
-										var plataforma3 = "_ps3";
-									} else if (data.data[i].plataforma3.nome == "Playstation 4"){
-										template.find(".capa").addClass("capaPlaystation4");
-										var plataforma3 = "_ps4";
-									} else if (data.data[i].plataforma3.nome == "PC"){
-										template.find(".capa").addClass("capaPC");
-										var plataforma3 = "_pc";
-									}
-								}
-
-								urlCapa = [capa.slice(0, position), plataforma3, capa.slice(position)].join('');
-							}
-
-							var imageExist3 = imageExists(urlCapa);
-							if (imageExist3 == false){
 								urlCapa = window.homepath + "images/notfound.png";
 							}
 

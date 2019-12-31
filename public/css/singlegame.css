@@ -1,5 +1,4 @@
 #page-singlegame section#singlegame {
-    z-index: 0;
     position: relative;
     margin: 11em 0 0em;
     background-color: #262626;
@@ -11,14 +10,13 @@
     color: white;
 }
 
-
 /*************************/
 /* Mais Infos            */
 /*************************/
 #page-singlegame section#singlegame .maisInfos {
     position: relative;
     background-color: #3D3D3D;
-    height: 45em;
+    min-height: 48em;
     margin-top: -8em;
     padding: 4em;
     margin-left: -2.2em;
@@ -29,7 +27,7 @@
     margin: 3em 0;
     background-color: #494949;
     font-family: 'Orator Std';
-    padding: 2.5em 4em;
+    padding: 2.5em 4.2em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -53,11 +51,19 @@
 }
 
 #page-singlegame section#singlegame .maisInfos ul.fotos li.foto {
-    flex: 0 0 30%;
-    margin: 0.74em;
+    flex: 0 0 32%;
+    margin: 0.7em 0.7em 0.2em 0;
 }
 
-#page-singlegame section#singlegame .imagemContainer {
+#page-singlegame section#singlegame .maisInfos ul.fotos li.foto:nth-child(3n) {
+    margin-right: 0;
+}
+
+#page-singlegame section#singlegame .maisInfos ul.fotos li.foto.template {
+    display: none;
+}
+
+#page-singlegame section#singlegame .imagemContainer, #page-singlegame section#singlegame .trailerContainer, #page-singlegame section#singlegame .gameplayContainer {
     width: 100%;
 }
 
@@ -67,20 +73,34 @@
     cursor: pointer;
 }
 
+#page-singlegame section#singlegame .trailerContainer .gameplay {
+    outline: none;
+}
+
+#page-singlegame section#singlegame .gameplayContainer .trailer {
+    outline: none;
+}
+
+
 /*************************/
 /* Ficha                 */
 /*************************/
 #page-singlegame section#singlegame .ficha .semana {
-    font-size: 1.3em;
+    font-size: 1.15em;
     line-height: 1em;
     margin: 0.3em 0 0;
 }
 
-#page-singlegame section#singlegame .ficha .capa {margin: 1em auto;}
+#page-singlegame section#singlegame .ficha .capa {
+    margin: 1em auto 1.2em;
+    width: 8em;
+    height: 11em;
+}
 
 #page-singlegame section#singlegame .ficha .capa img.capaGame {
     width: 100%;
     height: 100%;
+    /* border: 0.2em solid black; */
 }
 
 #page-singlegame section#singlegame .ficha .tag {
@@ -92,18 +112,71 @@
     line-height: 1em;
     text-transform: uppercase;
     margin-bottom: 0.4em;
-    font-size: 0.8em;
+    font-size: 0.7em;
     cursor: pointer;
     display: inline-block;
+    margin-right: 0.5em;
+}
+
+#page-singlegame section#singlegame .ficha .tag.template {
+    display: none;
 }
 
 #page-singlegame section#singlegame .ficha .desenvolvedora {
     font-size: 0.7em;
-    margin-top: 1em;
+    margin: 1em 0 0.5em;
+}
+
+#page-singlegame section#singlegame .ficha .desenvolvedora .desenvolvedora_titulo {
+    font-weight: bold;
 }
 
 #page-singlegame section#singlegame .ficha .data {
     font-size: 0.9em;
+}
+
+#page-singlegame section#singlegame .ficha .plataforma {
+    text-transform: capitalize;
+    background-color: #eaeaea;
+    width: fit-content;
+    padding: 0.5em 1em 0.1em;
+    color: #262626;
+    margin: 0.2em 0.33em 0;
+    line-height: 1em;
+    font-size: 0.6em;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+#page-singlegame section#singlegame .ficha .plataforma.template {
+    display: none;
+}
+
+#page-singlegame section#singlegame .ficha .plataformas_titulo {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+#page-singlegame section#singlegame .ficha .plataforma .console {
+    top: -0.1em;
+    position: relative;
+}
+
+#page-singlegame section#singlegame .ficha .plataforma .icon-playstation4 , #page-singlegame section#singlegame .ficha .plataforma .icon-playstation3 {
+    font-size: 2em;
+    position: relative;
+    top: 0.2em;
+    height: 0.5em;
+    display: inline-block;
+    line-height: 0em;
+}
+
+#page-singlegame section#singlegame .ficha .nome {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin: 0.2em 0;
+    font-weight: bold;
 }
 
 /*************************/
@@ -116,5 +189,115 @@
 #page-singlegame section#singlegame .game .videos .legenda {
     font-family: 'Orator Std';
     font-size: 0.7em;
-    margin: 1em;
+    margin: 0.2em 0 1em;
+    font-weight: bold;
+}
+
+/*************************/
+/* Loading               */
+/*************************/
+#page-singlegame section#singlegame.loading .game {
+    display: none;
+}
+
+#page-singlegame section#singlegame .game {
+    display: block;
+}
+
+#page-singlegame section#singlegame img.loading {
+    display: none;
+}
+
+#page-singlegame section#singlegame.loading img.loading {
+    display: block;
+    width: 1.5em;
+    margin: 0 auto;
+    height: 35em;
+}
+
+#page-singlegame section#singlegame.loading img.loadingPages {
+    width: 2em;
+    margin: 0 auto;
+    height: 1em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: -0.3em;
+    display: block;
+}
+
+#page-singlegame section#singlegame img.loadingPages {
+    display: none;
+}
+
+/**************/
+/* Lightbox   */
+/**************/
+#page-singlegame .lightbox_div {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    background-color: #00000080;
+    height: 100%;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+#page-singlegame .lightbox_div img {
+    z-index: 10000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    border: 1em solid white;
+    max-width: 48em;
+}
+
+#page-singlegame .lightbox_div .seta {
+    color: black;
+    z-index: 100000;
+    background: white;
+    line-height: 0;
+    padding: 0.5em;
+    position: absolute;
+    cursor: pointer;
+}
+
+#page-singlegame .lightbox_div .seta_esquerda {
+    left: 18%;
+    top: 50%;
+    transform: translate(-18%, -50%);
+}
+
+#page-singlegame .lightbox_div .seta_esquerda .icon-arrow-left {
+    font-size: 3em;
+}
+
+#page-singlegame .lightbox_div .seta_direita {
+    right: 18%;
+    top: 50%;
+    transform: translate(18%, -50%);
+}
+
+#page-singlegame .lightbox_div .seta_direita .icon-arrow-right {
+    font-size: 3em;
+}
+
+#page-singlegame .lightbox_div .seta.nomore {
+    opacity: 0.7;
+    cursor: unset;
 }

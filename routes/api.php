@@ -10,6 +10,7 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::group(['middleware'=>'auth:api'], function() {
 
 	Route::get('/buscarGame', 'GameController@buscarGame');
+	Route::get('/buscarGame/{game}', 'GameController@buscarGame');
 	
 });
 
