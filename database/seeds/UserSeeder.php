@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         $user = new User([
             'nome'  => "Alan Pardini Sant'Ana",
             'email'  => "alanps2012@gmail.com",
-            'password'  => bcrypt("123"),
+            'password'  => "123",
             'api_token'  => "NOvgX6zpAh8F0JvZhk2EVV1RxzUk7JDrvJJC2x9lFO3mzz9Lm3rgPGAFyKp6",
             'thumbnail_id'  => 1,
             'nascimento'  => 560822400,
