@@ -16,21 +16,25 @@ class PlataformaSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Plataforma::truncate();
 
-        foreach($this->nomes() as $nome) {
+        foreach($this->plataformas() as $plataforma_) {
             $plataforma = new Plataforma([
-                'nome'  => $nome,
+                'nome'  => $plataforma_[0],
+                'slug'  => $plataforma_[1],
             ]);
             $plataforma->save();
         }
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 
-    private function nomes() {
-        return ['Xbox One',
-                'Xbox 360',
-                'Playstation 3',
-                'Playstation 4',
-                'PC',
+    private function plataformas() {
+        return [
+                [ 'Xbox 360','xbox360' ],
+                [ 'Xbox One','xboxone' ],
+                [ 'Xbox Series X / S','xboxseriesxs' ],
+                [ 'Playstation 3','playstation3' ],
+                [ 'Playstation 4','playstation4' ],
+                [ 'Playstation 5','playstation5' ],
+                [ 'PC','pc' ],
                ];
     }
 
