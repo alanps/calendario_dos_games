@@ -43,8 +43,8 @@
 </head>
 
 <script>
-    window.homepath = "http://localhost/calendario-dos-games/public/";
-    window.uploadspath = "http://localhost/calendario-dos-games/storage/app/public/";
+    window.homepath = "https://www.agenciadreamup.com.br/calendario-dos-games/";
+    window.uploadspath = "https://www.agenciadreamup.com.br/calendario-dos-games/storage/app/public/";
     window.token = "NOvgX6zpAh8F0JvZhk2EVV1RxzUk7JDrvJJC2x9lFO3mzz9Lm3rgPGAFyKp6";
 </script>
 
