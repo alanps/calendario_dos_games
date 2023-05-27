@@ -24,7 +24,8 @@ class Api {
         if ($data instanceof LengthAwarePaginator) {
             $data_arr = $data->toArray();
             $data = $data_arr['data'];
-            $pagination = array_except($data_arr, 'data');
+            unset($data_arr['data']);
+            $pagination = $data_arr;
             $conteudo += ['extras' => $pagination];
         }
 

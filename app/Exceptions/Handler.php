@@ -28,42 +28,4 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
-     * Report or log an exception.
-     *
-     * @param  \Exception  $exception
-     * @return void
-     */
-    public function report(Exception $exception)
-    {
-        parent::report($exception);
-    }
-
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
-     */
-    public function render($request, Exception $exception)
-    {   
-        if ($exception instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
-            return Api::json(false, "Objeto não localizado", null, 404);
-        }
-        else if ($exception instanceof \Illuminate\Validation\ValidationException) {
-            return Api::json(false, $exception->errors());
-        }
-        else if ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
-            return Api::json(false, "Acesso negado", null, 403);
-        }
-        else if ($exception instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
-            return Api::json(false, "Método inválido", null, 403);
-        }
-        else if ($exception instanceof \Illuminate\Database\QueryException) {
-            return Api::json(false, "Exceção na Query", $exception);
-        }
-
-        return parent::render($request, $exception);
-    }
 }
