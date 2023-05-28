@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "8.2.3",
+        "php": "8.2.6",
         "doctrine/dbal": "3.6.2",
         "dyrynda/laravel-cascade-soft-deletes": "*",
         "illuminate/contracts": "10.12.0",
